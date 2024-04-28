@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* Define CSS variables for colors and fonts */
+:root {
+	--font-primary: "Manrope", sans-serif;
+	--color-background: hsl(218, 23%, 16%);
+	--color-text: hsl(193, 38%, 86%);
+	--color-highlight: hsl(150, 100%, 66%);
+	--color-container-bg: hsl(217, 19%, 24%);
+}
+
+/* Reset default styles */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+	font-family: var(--font-primary);
+	background-color: var(--color-background);
+	color: var(--color-text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Container styling */
+.advice-container {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-container-bg);
+	border-radius: 12px;
+	padding: 30px 30px 50px 30px;
+	width: 435px;
+	height: 265px;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+/* Advice counter styling */
+.advice-counter {
+	color: var(--color-highlight);
+	letter-spacing: 0.5rem; /* Improved unit consistency */
+	font-size: 0.625rem; /* Improved unit consistency */
+}
+
+/* Advice text styling */
+.advice-text {
+	text-align: center;
+	line-height: 1.5; /* Improved readability */
+	font-size: 1.4375rem; /* Improved unit consistency */
+	font-weight: 600;
+}
+
+/* Divider styling */
+.divider {
+	width: 100%;
+}
+
+/* Button container styling */
+.button-container {
+	position: absolute;
+	bottom: -20px;
+}
+
+/* Button styling */
+.next-advice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-highlight);
+	border-radius: 50%;
+	width: 3.125rem; /* Improved unit consistency */
+	height: 3.125rem;
+	border: none;
+	cursor: pointer;
+}
+
+.next-advice img {
+	height: 1.25rem; /* Improved unit consistency */
+	width: 1.25rem;
+}
+
+/* Button hover styling */
+.next-advice:hover {
+	box-shadow: 0 0.75rem 1.75rem rgba(82, 255, 168, 0.75);
+	transition: box-shadow 0.3s ease;
+}
+
+/* Media query for responsive design */
+@media (max-width: 375px) {
+	/* Adjust container width and height */
+	.advice-container {
+		width: 300px;
+		height: 200px;
+		padding: 20px;
+	}
+
+	/* Adjust text size */
+	.advice-counter {
+		font-size: 0.5rem;
+		letter-spacing: 0.3rem;
+	}
+
+	.advice-text {
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+
+	/* Adjust button container */
+	.button-container {
+		bottom: -15px;
+	}
+
+	/* Adjust button size */
+	.next-advice {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+
+	/* Adjust button icon size */
+	.next-advice img {
+		height: 1rem;
+		width: 1rem;
+	}
+}
